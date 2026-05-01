@@ -69,6 +69,8 @@ public class PlayerServiceImpl implements PlayerService {
         return playerMapper.toResponseDTO(updatePlayer);
     }
 
+
+
     @Override
     public void deleteById(Long id) {
         repositoryPlayer.findById(id).orElseThrow(()-> new ResourceNotFoundException("Jugador no encontrado"));
